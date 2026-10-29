@@ -1,0 +1,55 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+from __future__ import annotations
+
+from cog import BaseModel, BasePredictor, Input, Path
+from ultralytics import YOLOWorld
+
+
+class Output(BaseModel):
+    """Output model for predictions."""
+
+    image: Path | None = None
+    json_str: str | None = None
+
+
+# Resolve PEP 563 string annotations so Cog's pydantic can build the Output schema (Path passed in explicitly).
+Output.update_forward_refs(Path=Path)
+
+
+class Predictor(BasePredictor):
+    """YOLOv8s WorldV2 model predictor for Replicate deployment."""
+
+    def setup(self) -> None:
+        """Load YOLOWorld model into memory."""
+        self.model = YOLOWorld("yolov8s-worldv2.pt")
+
+    def re_init_model(self, class_names: str) -> None:
+        """Re-Initialize model with class names."""
+        self.model = YOLOWorld("yolov8s-worldv2.pt")
+        class_list = [c.strip() for c in class_names.split(",") if c.strip()]
+        if class_list:
+            self.model.set_classes(class_list)
+
+    def predict(
+        self,
+        image: Path = Input(description="Input image"),
+        conf: float = Input(description="Confidence threshold", default=0.25, ge=0.0, le=1.0),
+        iou: float = Input(description="IoU threshold for NMS", default=0.45, ge=0.0, le=1.0),
+        imgsz: int = Input(description="Image size", default=640, choices=[320, 416, 512, 640, 832, 1024, 1280]),
+        class_names: str = Input(
+            description="Comma-separated list of class names to detect (e.g., 'person, bus, sign').",
+            default="person, bus, sign",
+        ),
+        return_json: bool = Input(description="Return detection results as JSON", default=False),
+    ) -> Output:
+        """Run inference and return annotated image with optional JSON results."""
+        self.re_init_model(class_names)
+        result = self.model(str(image), conf=conf, iou=iou, imgsz=imgsz)[0]
+        image_path = "output.png"
+        result.save(image_path)
+
+        if return_json:
+            return Output(image=Path(image_path), json_str=result.to_json())
+        else:
+            return Output(image=Path(image_path))
