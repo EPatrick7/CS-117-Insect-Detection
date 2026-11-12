@@ -4,3 +4,10 @@ __pycache__/
 runs/
 weights/
 *.cache
+data/INSECT12C/
+insect12c.yaml
+train.txt
+val.txt
+test.txt
+text_embeddings_clip_ViT-B_32.pt
+/yolov8s-worldv2.pt

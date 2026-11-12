@@ -1,7 +1,8 @@
 """Baseline of untrained YOLO-World with the prompt "insect", scored on the test split
 
 usage:
-    python scripts/finetune.py --data-root data/INSECT12C --quick # writes insect12c.yaml
+    python scripts/finetune.py --data-root data/INSECT12C --quick # writes insect12c.yaml,
+      CTRL C when it prints wrote insect12c.yaml to not waste time
     python scripts/baseline.py
 """
 from ultralytics import YOLOWorld
