@@ -1,0 +1,26 @@
+<annotation>
+	<folder>INSECT12C</folder>
+	<filename>img582.jpg</filename>
+	<path>C:\INSECT12C\img582.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Edessa_meditabunda</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>303</xmin>
+			<ymin>275</ymin>
+			<xmax>379</xmax>
+			<ymax>356</ymax>
+		</bndbox>
+	</object>
+</annotation>

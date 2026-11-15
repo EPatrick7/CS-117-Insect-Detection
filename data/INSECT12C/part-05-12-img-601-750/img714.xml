@@ -1,0 +1,26 @@
+<annotation>
+	<folder>INSECT12C</folder>
+	<filename>img714.jpg</filename>
+	<path>C:\INSECT12C\img714.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>800</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Diabrotica_speciosa</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>211</xmin>
+			<ymin>281</ymin>
+			<xmax>329</xmax>
+			<ymax>409</ymax>
+		</bndbox>
+	</object>
+</annotation>

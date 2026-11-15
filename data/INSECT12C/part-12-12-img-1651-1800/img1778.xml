@@ -1,0 +1,26 @@
+<annotation>
+	<folder>INSECT12C</folder>
+	<filename>img1778.jpg</filename>
+	<path>C:\INSECT12C\img1778.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Lagria_villosa</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>233</xmin>
+			<ymin>244</ymin>
+			<xmax>311</xmax>
+			<ymax>335</ymax>
+		</bndbox>
+	</object>
+</annotation>

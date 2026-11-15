@@ -1,0 +1,26 @@
+<annotation>
+	<folder>INSECT12C</folder>
+	<filename>img1709.jpg</filename>
+	<path>C:\INSECT12C\img1709.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>800</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Gastropoda</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>215</xmin>
+			<ymin>409</ymin>
+			<xmax>286</xmax>
+			<ymax>472</ymax>
+		</bndbox>
+	</object>
+</annotation>

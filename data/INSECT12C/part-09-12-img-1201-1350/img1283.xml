@@ -1,0 +1,26 @@
+<annotation>
+	<folder>INSECT12C</folder>
+	<filename>img1283.jpg</filename>
+	<path>C:\INSECT12C\img1283.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>800</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Euschistus_heros_adulto</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>256</xmin>
+			<ymin>313</ymin>
+			<xmax>315</xmax>
+			<ymax>377</ymax>
+		</bndbox>
+	</object>
+</annotation>
