@@ -1,0 +1,5 @@
+# Single-class experiment. Use single_cls=True with the original species labels.
+train: data/INSECT12C/train
+val: data/INSECT12C/val
+test: data/INSECT12C/test
+names: [insect]

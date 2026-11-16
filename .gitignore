@@ -4,9 +4,6 @@ __pycache__/
 runs/
 weights/
 *.cache
-data/INSECT12C/stock_insect_splits/
-data/INSECT12C/part-09-12-img-1201-1350/img1272.xml.txt
-insect12c.yaml
 train.txt
 val.txt
 test.txt
